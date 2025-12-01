@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Donation Form - Sri Lanka Flood Relief</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .note {
+      background-color: #f0f9f5;
+      border-left: 5px solid #27ae60;
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      color: #2c3e50;
+      font-size: 14px;
+      line-height: 1.5;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: 700;
+      color: #34495e;
+    }
+
+    input, textarea, select {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #27ae60;
+      box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+      outline: none;
+    }
+
+    button {
+      background-color: #27ae60;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2ecc71;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    #msg {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 600;
+      color: #27ae60;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @media (max-width: 650px) {
+      .container { margin: 20px; padding: 20px; }
+      button { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>United Kingdom to Sri Lanka Donation Form</h2>
+
+    <div class="note">
+      <strong>Dear Donor,</strong><br><br>
+      Thank you for supporting Sri Lanka flood relief. Your donation, whether food, water, clothing, medicine, money, or other essentials, makes a real difference.  
+      <ul>
+        <li>Please fill all required fields accurately.</li>
+        <li>If you wish to donate multiple times, you can submit this form again for each donation.</li>
+        <li>For physical items, ensure packaging is safe and labelled correctly.</li>
+        <li>Preferred pickup times help us coordinate volunteers efficiently.</li>
+        <li>Your details are safe and will only be used for donation coordination.</li>
+      </ul>
+      We deeply appreciate your generosity and support!
+    </div>
+
+    <form id="donationForm">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" placeholder="John Doe" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" placeholder="you@example.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" name="phone" id="phone" placeholder="+44 7123 456789" required>
+
+      <label for="donationType">Donation Type</label>
+      <select name="donationType" id="donationType" required>
+        <option value="" disabled selected>Select donation type</option>
+        <option value="Food">Food</option>
+        <option value="Water">Water</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Medicine">Medicine</option>
+        <option value="Money">Money / Financial Support</option>
+        <option value="Other">Other</option>
+      </select>
+
+<label for="quantity">Quantity / Value</label>
+<input type="text" name="quantity" id="quantity" placeholder="e.g., 5 kg, 10 packets, £50" required>
+
+<label for="contents">Contents / Items Included</label>
+<textarea name="contents" id="contents" rows="2" placeholder="e.g., Rice, Canned Beans, Water Bottles, Clothes" required></textarea>
+
+<label for="address1">Address Line 1</label>
+<input type="text" name="address1" id="address1" placeholder="Street / House number" required>
+
+<label for="address2">Address Line 2 (Optional)</label>
+<input type="text" name="address2" id="address2" placeholder="Apartment / Building / Locality">
+
+<label for="city">City / Town</label>
+<input type="text" name="city" id="city" placeholder="e.g., London" required>
+
+<label for="county">County</label>
+<input type="text" name="county" id="county" placeholder="e.g., Greater London" required>
+
+<label for="postcode">Postcode</label>
+<input type="text" name="postcode" id="postcode" placeholder="e.g., SW1A 1AA" required>
+
+      <label for="pickupTime">Preferred Pickup Time / Availability</label>
+      <select name="pickupTime" id="pickupTime" required>
+        <option value="" disabled selected>Select a time slot</option>
+        <option value="06:00-09:00">Early Morning (6am - 9am)</option>
+        <option value="09:00-12:00">Morning (9am - 12pm)</option>
+        <option value="12:00-14:00">Midday (12pm - 2pm)</option>
+        <option value="14:00-16:00">Afternoon (2pm - 4pm)</option>
+        <option value="16:00-18:00">Late Afternoon (4pm - 6pm)</option>
+        <option value="18:00-20:00">Evening (6pm - 8pm)</option>
+        <option value="Anytime">Anytime</option>
+      </select>
+
+      <label for="notes">Additional Notes / Instructions</label>
+      <textarea name="notes" id="notes" rows="2" placeholder="Any special instructions or notes"></textarea>
+
+      <button type="submit">Submit Donation</button>
+    </form>
+
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxo_eB_EyESwSt0OD5d93yi8e2_9Eu80ZlFeBQqpdzwJ1rV6mpFVttvRxc22Lb9eRC1dw/exec";
+
+    const form = document.getElementById("donationForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        await fetch(scriptURL, {
+          method: "POST",
+          body: JSON.stringify(data)
+        });
+        document.getElementById("msg").innerText = "Thank you! Your donation has been recorded.";
+        form.reset();
+      } catch (err) {
+        document.getElementById("msg").innerText = "Oops! Something went wrong. Please try again.";
+        console.error(err);
+      }
+    });
+  </script>
+
+</body>
+</html>
